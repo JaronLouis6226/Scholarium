@@ -149,13 +149,13 @@ textarea, input[type="text"], input[type="number"] {
   font-family: var(--font);
   color: var(--text);
   background: var(--log-bg);
-  transition: background 0.2s, box-shadow 0.2s;
   outline: none;
 }
 textarea::placeholder, input::placeholder { color: var(--text-tertiary); opacity: 0.7; }
 textarea:focus, input:focus {
   background: var(--surface);
   box-shadow: 0 0 0 2px var(--accent);
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
 }
 textarea {
   resize: vertical;
@@ -418,29 +418,27 @@ textarea {
   .right-panel { min-height: 400px; }
 }
 
-/* Theme transitions */
+/* Theme transitions — unified timing for all themed elements */
 html, body, .header, .card, .log-area, .results-table-wrapper,
 textarea, input[type="text"], input[type="number"],
 .btn-primary, .btn-secondary, .th-copy-btn,
-#results-table th, #results-table tbody tr:nth-child(even) {
-  transition: background-color 2s ease;
+#results-table th, #results-table tbody tr:nth-child(even),
+#results-table tbody tr:hover {
+  transition: background-color 0.5s ease;
 }
 body, .logo, .section-label, label, .btn, .log-line,
 .results-title, .results-summary, .stat-bar, .stat-bar span,
 #results-table th, #results-table td, .cell-content, .cell-email, .cell-status,
 textarea, input, .th-copy-btn, .advanced-toggle, .empty-text,
 .param-group label, .param-hint {
-  transition: color 2s ease;
+  transition: color 0.5s ease;
 }
 textarea, input[type="text"], input[type="number"] {
-  transition: background-color 2s ease, box-shadow 2s ease, color 2s ease;
+  transition: background-color 0.5s ease, box-shadow 0.5s ease, color 0.5s ease;
 }
 .btn-primary {
-  transition: background-color 2s ease, filter 2s ease, color 2s ease;
+  transition: background-color 0.5s ease, filter 0.5s ease, color 0.5s ease;
 }
-.header {
-  transition: background-color 2s ease;
-}
-.logo {
-  transition: color 2s ease;
+.btn-secondary {
+  transition: background-color 0.5s ease, color 0.5s ease;
 }
