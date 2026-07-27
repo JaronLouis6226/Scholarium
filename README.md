@@ -96,7 +96,3 @@ Excel 文件包含三列：
 
 ## License
 本项目仅供学习与研究使用。请仅用于合法用途，遵守目标网站的 robots.txt 和使用条款。本项目仅采集教师在主页公开的信息，不会采集非公开信息。
-
-
-## Scholarium 浏览器插件
-本项目还有一个Edge/Chrome浏览器插件版本，更加便携，没有PDF解析功能，详情可跳转`https://github.com/JaronLouis6226/Scholarium`。
