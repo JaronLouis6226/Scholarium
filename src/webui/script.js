@@ -13,6 +13,9 @@ try{var P=[
 var S=document.documentElement.style,cur=0;
 function A(n){
   var d=P[n];
+  // Use setProperty (not cssText) so the browser sees each variable as
+  // "changed" rather than "removed-then-added", which correctly triggers
+  // CSS transitions.  Modern browsers batch these into a single frame.
   S.setProperty('--accent',d.p);
   S.setProperty('--accent-hover',d.h);
   S.setProperty('--accent-subtle',d.s);
